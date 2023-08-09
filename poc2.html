@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Post Message PoC</title>
+        <h1>Post Message PoC</h1>
+
+            <script>
+                window.pwned=window.open('file:///f%3A/Research/post-message.html')
+                setTimeout(() => {
+                    pwned.postMessage('hello','*');
+                },2000);
+            </script>
+    </head>
+</html>
