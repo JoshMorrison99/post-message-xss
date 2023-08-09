@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Post Message XSS Lab</title>
+        <h1>Post Message XSS Lab</h1>
+        <pre id="textTag">The current domain is: </pre>
+        <script>
+            console.log('test')
+            window.addEventListener("message", (event) => {
+                console.log(event)
+                document.getElementById('textTag').innerHTML = "" + event.data.toString()
+            })
+        </script>
+    </head>
+</html>
